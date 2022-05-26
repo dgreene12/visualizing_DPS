@@ -52,6 +52,7 @@ parks <- read.csv("data/2020/spatial_data/renamed_Parks.csv")
 rec <- read.csv("data/2020/spatial_data/renamed_Recreation Centers.csv")
 religious <- read.csv("data/2020/spatial_data/renamed_Religious Centers.csv")
 schools <- read.csv("data/2020/spatial_data/schools.csv")
+hospitals <- read.csv("data/2020/spatial_data/renamed_Hospitals and Clinics.csv")
 
 schoolstats$name <- c("C.C. Spaulding Elementary", "Eastway Elementary",
                       "E.K. Powe Elementary", "Fayetteville Street Elementary", 
@@ -71,7 +72,8 @@ iconSet <- iconList(
     libraries = makeIcon("https://img.icons8.com/windows/32/000000/book--v1.png", iconWidth=20, iconHeight=20),
     religious = makeIcon("https://img.icons8.com/fluent-systems-regular/48/000000/chapel.png", iconWidth=20, iconHeight=20),
     uni = makeIcon("https://img.icons8.com/wired/64/000000/university-campus.png", iconWidth = 40, iconHeight = 40),
-    schools = makeIcon("https://img.icons8.com/material-sharp/24/000000/school-building.png", iconWidth = 20, iconHeight = 20)
+    schools = makeIcon("https://img.icons8.com/material-sharp/24/000000/school-building.png", iconWidth = 20, iconHeight = 20),
+    hospitals = makeIcon("https://img.icons8.com/pastel-glyph/64/000000/hospital-wagon-without-a-siren.png", iconWidth = 20, iconHeight = 20)
 )
 
 sidebar <- {dashboardSidebar(
@@ -289,7 +291,7 @@ body <- {dashboardBody(
                                     label = em("Choose a variable to display"),
                                     choices = c("Bus Stops", 
                                                 "Childcare Centers", "Community & Cultural Centers", "Gardens",
-                                                "Grocery Stores", "Libraries", "Parks", 
+                                                "Grocery Stores", "Hospitals and Clinics", "Libraries", "Parks", 
                                                 "Recreation Centers", "Religious Centers"),
                                     multiple = FALSE)),
                     box(width = 8,
@@ -853,7 +855,8 @@ actions compared to their white peers. A reason for this is racial bias leading 
                    "Community & Cultural Centers" = cultural, 
                    "Grocery Stores" = grocery, 
                    "Libraries" = libraries, 
-                   "Religious Centers" = religious)
+                   "Religious Centers" = religious,
+                   "Hospitals and Clinics" = hospitals)
         })
         
         displayIcon <- reactive({
@@ -866,7 +869,8 @@ actions compared to their white peers. A reason for this is racial bias leading 
                    "Community & Cultural Centers" = iconSet$cultural, 
                    "Grocery Stores" = iconSet$grocery, 
                    "Libraries" = iconSet$libraries, 
-                   "Religious Centers" = iconSet$religious)
+                   "Religious Centers" = iconSet$religious,
+                   "Hospitals and Clinics" = iconSet$hospitals)
         })
         
         displaySchool <- reactive({
@@ -1097,6 +1101,15 @@ actions compared to their white peers. A reason for this is racial bias leading 
                       "Below is more information about religious centers:",
                       "<br>",
                       a("The Benefits of Religiosity and Spirituality on Mental Health",
+                        href = "https://www.forbes.com/sites/alicegwalton/2018/09/17/raising-kids-with-religion-or-spirituality-may-protect-their-mental-health-study/?sh=647ed7d13287"))
+            }
+               else if(input$var == "Hospitals and Clinics"){
+                paste("Something about hospitals.",
+                      "<br>",
+                      "<br>",
+                      "Below is more information about hospitals and clinics:",
+                      "<br>",
+                      a("A link",
                         href = "https://www.forbes.com/sites/alicegwalton/2018/09/17/raising-kids-with-religion-or-spirituality-may-protect-their-mental-health-study/?sh=647ed7d13287"))
             }
         })
