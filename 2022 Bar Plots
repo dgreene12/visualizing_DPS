@@ -736,7 +736,7 @@ shinyApp(
             geom_bar(stat="identity", position = "dodge", fill="#76B9F0") + 
             coord_flip() +
             theme_minimal() +
-            geom_hline(aes(text="Durham County Average = 80.7%", yintercept = 80.7), color ='#01016D') +
+            geom_hline(aes(text="Durham County Average = 81%", yintercept = 81), color ='#01016D') +
             geom_text(aes(label = number), vjust = 0)+
             theme(plot.title = element_text(hjust = 1.5)) +
             labs(title = "Percentage of BIPOC Students" , x = "School", y = "BIPOC Students (%)")
