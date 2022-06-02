@@ -1971,5 +1971,9 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                                                          slidesToShow = 3,
                                                          slidesToScroll = 1)
     })
-  }
+    
+     observeEvent(input$show, {
+      showNotification("Information not yet available.")
+    })
+    }
 )
