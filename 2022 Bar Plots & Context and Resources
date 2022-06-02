@@ -1161,7 +1161,7 @@ Students can take these classes for an opportunity to receive college credit upo
       else if (input$select == "English as a Second Language (ESL) Student Enrollment"){
         paste("This graph shows the number of students enrolled in the English as a Second Language (ESL) or English Language Learners (ELL) Program. 
         ESL students consist of any student regardless of ethnicity, origin, race, age, etc. who is a non-native English speaker. These programs are c
-        reated to help children learn English along with other subjects necessary to complete each grade.", "<br>", "<br>", "Unfortunately, 
+        reated to help children learn English along with other subjects necessary to complete each grade.", "<br>", "Unfortunately, 
                 ESL students can face racial bias, discrimination, and bullying in the classroom. Teachers may bar them from participating in school 
                 activities, extracurriculars, and enrichment programs. It is important that school affiliates recognize that language barriers do not 
                 stunt intellectual development. Additionally, ELL teachers must accommodate their students instead of assimilating them by removing 
@@ -1251,7 +1251,7 @@ their homes, which ultimately changes the demographics of those neighborhoods.
       else if (input$select == "Median Household Income"){
         paste("This graph shows the median household income for each school zone. According to the 2020 US census, 
         the median household income in the United States is $67,521. This is a 2.9% decrease from 2019, which is the 
-        first statistically significant decline we have witnessed since 2011.", "<br>", "<br>", "The average household income 
+        first statistically significant decline we have witnessed since 2011.", "<br>", "The average household income 
         in North Carolina is $54,602, while the median is $65,534, according to the US census as of 2019. Most of these 
         schools fall below the NC and US median, a cause for concern. Poverty directly affects how students learn. 
         Students’ basic human needs must be met in order to excel in the classroom. ", "<br>", "<br>", "Below are links to 
@@ -1401,13 +1401,11 @@ their homes, which ultimately changes the demographics of those neighborhoods.
     
     output$context <- renderText({
       if(input$var == "Parks"){
-        paste("The presence of parks in a community is vital to increase 
-                        community engagement, assist in the economic development 
-                        of cities, bolster public health, and help children learn. 
-                        Parks allow people to interact with each other in an outdoor 
-                        community space. Children are able to play and explore nature 
-                        in an increasingly digital world, providing benefits such 
-                        as decreased stress and potentially obesity rates.",
+        paste("The presence of parks in a community is vital to increase community engagement, 
+        assist in the economic development of cities, bolster public health, and help children learn. 
+        Parks allow people to interact with each other in an outdoor community space. Children are 
+        able to play and explore nature in an increasingly digital world, providing benefits such 
+        as decreased stress and potentially, obesity rates.",
               "<br>",
               "<br>",
               "Below is more information about parks:",
@@ -1418,13 +1416,9 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://www.nrpa.org/uploadedFiles/nrpa.org/Advocacy/Resources/Parks-Recreation-Essential-Public-Services-January-2010.pdf"))
       }
       else if(input$var == "Recreation Centers"){
-        paste("Recreation centers have varying amenities, frequently including
-                fitness centers, basketball courts, and multipurpose rooms. These 
-                facilities can be utilized for afterschool programs, both indoor 
-                and outdoor recreation, and meeting spaces. Similar to parks, recreation
-                centers promote active lifestyles. They function as a 
-                community hub, have the ability to host after- and before-school care programs, 
-                and may offer inexpensive or even free tutoring.",
+        paste("Recreation centers have varying amenities, frequently including fitness centers, basketball courts, 
+        and multipurpose rooms. These facilities can be utilized for afterschool programs, indoor and outdoor 
+        recreation, and meeting spaces. Similar to parks, recreation centers promote active lifestyles.", "<br>", "<br>", "Benefits include:", "<br>", "<br>", "-Functioning as a community hub", "<br>", "-Ability to host before- and after-school care programs", "<br>", "May offer inexpensive or free tutoring",
               "<br>",
               "<br>",
               "Below is more information about recreation centers:",
@@ -1436,20 +1430,14 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://www.nrpa.org/publications-research/park-pulse/park-pulse-survey-recreation-centers-role-in-communities/"))
       }
       else if(input$var == "Gardens"){
-        paste("Gardens offer numerous benefits to the community including nature
-                      therapy, fresh produce, and cleaner air. A study of 63 gardens in 
-                      upstate New York found that “gardens in low-income neighborhoods 
-                      (46%) were four times as likely as non low-income gardens to lead
-                      to other issues in the neighborhood being addressed; reportedly 
-                      due to organizing facilitated through the community gardens” 
-                      (Armstrong). Another study, published in Public Health Nutrition, 
-                      noted “commonly cited barriers to fruit and vegetable intake 
-                      include cost, availability and acceptance. Community gardens 
-                      have the potential to decrease these barriers by lowering the 
-                      cost of produce, increasing access, and eventually increasing 
-                      acceptance and improving taste perceptions of fruits and vegetables” 
-                      (Dibsdall et. al). With the ability to benefit public health and 
-                      serve as community hubs, gardens are impactful to a community.",
+        paste("Gardens offer numerous benefits to the community including nature therapy, fresh produce, and cleaner air. 
+        A study of 63 gardens in upstate New York found that “gardens in low-income neighborhoods (46%) were four times as 
+        likely as non low-income gardens to lead to other issues in the neighborhood being addressed; reportedly due to 
+        organizing facilitated through the community gardens” (Armstrong). Another study published in Public Health Nutrition 
+        noted, “Commonly cited barriers to fruit and vegetable intake include cost, availability and acceptance. Community 
+        gardens have the potential to decrease these barriers by lowering the cost of produce, increasing access, and eventually 
+        increasing acceptance and improving taste perceptions of fruits and vegetables” (Dibsdall et. al). With the ability to 
+        benefit public health and serve as community hubs, gardens are impactful to a community. ",
               "<br>",
               "<br>",
               "Below is more information about parks:",
@@ -1465,16 +1453,13 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://nccommunitygardens.ces.ncsu.edu/resources-3/nccommunitygardens-research/"))
       }
       else if(input$var == "Bus Stops"){
-        paste("For those without their own vehicles, GoDurham and GoTriangle 
-                      buses serve as the primary form of public transit in Durham County. 
-                      According to the Federal Transportation Administration, GoDurham 
-                      averaged nearly 16,000 unlinked passenger trips (each time a 
-                      passenger boards) per day in 2020. Widespread bus stops play a 
-                      crucial role in improving equity throughout a region. A strong 
-                      public transit system can lead to decreased food insecurity 
-                      (particularly in areas lacking healthy, affordable food) in 
-                      addition to increased job opportunities (ride vs. walk to work)
-                      and public health (doctor’s office visits).",
+        paste("In order to live a healthy life, people must have access to affordable, nutritious food. 
+        Without access to this resource, many, especially those who are low-income, are prone to developing 
+        diet-related conditions such as obesity, diabetes, and cardiovascular disease. The areas lacking 
+        sufficient healthy food are often called “food deserts.” Food insecurity should not be considered a 
+        natural, geographical issue; but, rather an intentional denial of resources for historically marginalized 
+        racial groups. Thus, the term “food apartheid” has gained traction in recent years, and is now often 
+        preferred. We hope to show areas affected by food apartheid in an attempt to raise awareness about food insecurity.",
               "<br>",
               "<br>",
               "Below is more information about bus stops:",
@@ -1483,11 +1468,11 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://transitcenter.org/introducing-the-transit-equity-dashboard/"))
       }
       else if(input$var == "Childcare Centers"){
-        paste("Childcare centers allow for parents to work and earn money for 
-                the family. Childcare is particularly useful for single parents who 
-                often cannot afford to stay at home instead of working. Having several
-                childcare options near a person’s home can be beneficial in allowing 
-                parents to weigh the cost and quality of various centers.",
+        paste("Childcare centers assure parents and guardians that their child(ren) is safe and cared 
+        for while simultaneously allowing them to work and earn money for their family. Childcare is 
+        particularly useful for single parents who often cannot afford to stay at home instead of working. 
+        Having several childcare options near a person’s home can be beneficial in allowing parents to 
+        weigh the cost and quality of various centers.",
               "<br>",
               "<br>",
               "Below is more information about childcare centers:",
@@ -1496,13 +1481,12 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://www.americanprogress.org/issues/education-k-12/reports/2013/05/08/62519/the-importance-of-preschool-and-child-care-for-working-mothers/"))
       }
       else if(input$var == "Community & Cultural Centers"){
-        paste("The benefits of building community outside the school building contributes to 
-                      more powerful relationships and organizing within the school building. 
-                      Community centers have been found to promote community cohesion and sense of
-                      belonging while providing programming that supports self-esteem, health, and 
-                      academic success. Cultural centers also positively contribute to youth 
-                      development by providing positive self-images as well as opportunities to 
-                      learn about cultural practices and traditions of diverse groups.  ",
+        paste("The benefits of building community outside the school building contribute to more powerful 
+        relationships and organizing within the school building. Community centers have been found to 
+        promote community cohesion and sense of belonging while providing programming that supports 
+        self-esteem, health, and academic success. Cultural centers also positively contribute to youth 
+        development by providing positive self-images as well as opportunities to learn about cultural 
+        practices and traditions of diverse groups.  ",
               "<br>",
               "<br>",
               "Below is more information about community and cultural centers:",
@@ -1514,17 +1498,15 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://trianglecf.org/impact/impact-cultural-arts/"))
       }
       else if(input$var == "Grocery Stores"){
-        paste(" In order to live a healthy life, people must have access 
-                      to affordable, nutritious food. Without access to this resource,
-                      many, especially those who are low-income, are prone to developing
-                      diet-related conditions such as obesity, diabetes, and cardiovascular
-                      disease. The areas lacking sufficient healthy food are often called 
-                      “food deserts”. However, food insecurity should not be considered a
-                      natural, geographical issue, but rather an intentional denial of 
-                      resources for historically marginalized racial groups. Thus, the 
-                      term “food apartheid” has gained traction in recent years and is 
-                      now often preferred. We hope to show  areas affected by food apartheid
-                      in an attempt to raise awareness about food insecurity.",
+        paste("  In order to live a healthy life, people must have access to affordable, 
+        nutritious food. Without access to this resource, many, especially those who are 
+        low-income, are prone to developing diet-related conditions such as obesity, 
+        diabetes, and cardiovascular disease. The areas lacking sufficient healthy food 
+        are often called “food deserts.” Food insecurity should not be considered a natural, 
+        geographical issue; but, rather an intentional denial of resources for historically 
+        marginalized racial groups. Thus, the term “food apartheid” has gained traction in 
+        recent years, and is now often preferred. We hope to show areas affected by food 
+        apartheid in an attempt to raise awareness about food insecurity.",
               "<br>",
               "<br>",
               "Below is more information about grocery stores:",
@@ -1563,16 +1545,12 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://durhamcountylibrary.org"))
       }
       else if(input$var == "Religious Centers"){
-        paste("Religious centers are huge assets to the community because 
-                      of numerous services they offer. These services include donations,
-                      food drives, and fundraisers, providing safe spaces for many 
-                      cultures, counseling services, daycare, summer programs, and 
-                      much more. Additionally, the Durham community has established
-                      a rich inter-religion culture, especially in advocacy efforts
-                      for the city as a whole. Despite the multitude of religious 
-                      orientations, Durham residents have shown their willingness 
-                      to provide resources for those in need, regardless of religious
-                      orientation.",
+        paste("Religious centers are huge assets to the community because of various services they provide. 
+        These services include donations, food drives, fundraisers, providing safe spaces for various cultures, 
+        counseling services, daycare, summer programs, and much more. Additionally, the Durham community has 
+        established a rich inter-religion culture, especially in advocacy efforts for the city as a whole. 
+        Despite the diversity of religious orientations, Durham residents have shown their willingness to 
+        provide resources for all those in need, regardless of religious orientation.",
               "<br>",
               "<br>",
               "Below is more information about religious centers:",
@@ -1581,7 +1559,12 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://www.forbes.com/sites/alicegwalton/2018/09/17/raising-kids-with-religion-or-spirituality-may-protect-their-mental-health-study/?sh=647ed7d13287"))
       }
       else if(input$var == "Hospitals and Clinics"){
-        paste("Something about hospitals.",
+        paste("When faced with an emergency, time is of the essence. Being able to get to a hospital within minutes can be beneficial, 
+        and can literally save lives. Along with emergency services, hospitals also offer different types of therapy, services for 
+        individuals living with long-term illnesses, classes and events, and outpatient labs. Along with medical care and having a 
+        centralized location for medical records, hospitals can also provide employment opportunities to local residents.", "<br>", "<br>", 
+        "Additionally, private practices tend to be located near hospitals. These offices give patients a better opportunity to 
+        foster meaningful relationships with their nurses and primary care physicians.",
               "<br>",
               "<br>",
               "Below is more information about hospitals and clinics:",
@@ -1590,7 +1573,13 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://www.forbes.com/sites/alicegwalton/2018/09/17/raising-kids-with-religion-or-spirituality-may-protect-their-mental-health-study/?sh=647ed7d13287"))
       }
       else if(input$var == "Food Pantries"){
-        paste("Something about pantries",
+        paste("Food pantries are partner agencies and churches that obtain donated food from food banks to feed food insecure communities. 
+        Food insecurity refers to the lack of access to enough nutritious food to fully meet basic needs because of a lack of financial 
+        resources. Although some families are able to rely on the Supplemental Nutrition Assistance Program (SNAP), also known as “food 
+        stamps,” there are some families that earn too much to receive SNAP; but, don’t make enough money to afford adequate meals. 
+        Older adults and people with disabilities that are on fixed incomes sometimes have to choose between paying for medicine or 
+        purchasing nutritious food. Food pantries can provide individuals and families with supplemental food allowing them to 
+        reallocate money they would have used on food for rent or other utilities. ",
               "<br>",
               "<br>",
               "Below is more information about pantries:",
@@ -1599,7 +1588,12 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://www.forbes.com/sites/alicegwalton/2018/09/17/raising-kids-with-religion-or-spirituality-may-protect-their-mental-health-study/?sh=647ed7d13287"))
       }
       else if(input$var == "After-School Care Programs"){
-        paste("Something about after",
+        paste("Afterschool programs can promote positive youth development, and  support social, 
+        emotional, cognitive, and academic development, reduce risky behaviors, promote physical 
+        health, and provide a safe and supportive environment for children and youth, according 
+        to youth.gov. Several afterschool programs also offer before school programs allowing 
+        parents to drop-off and pick-up their child(ren) in a safe environment without interfering 
+        with their work schedule. ",
               "<br>",
               "<br>",
               "Below is more information about after:",
@@ -1608,6 +1602,21 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                 href = "https://www.forbes.com/sites/alicegwalton/2018/09/17/raising-kids-with-religion-or-spirituality-may-protect-their-mental-health-study/?sh=647ed7d13287"))
       }
     })
+          else if(input$var == "Farmers Markets"){
+        paste("  Farmers’ markets provide local citizens with fresh fruits and vegetables at the peak of their growing season. 
+        According to the University of Pittsburgh Medical Center, because everything sold is in-season, people that purchase 
+        produce from farmers’ markets get to experience the “truest flavors.” Because this produce is grown locally, there 
+        is a higher nutritional value. Local produce is typically minimally processed, and grown without the use of pesticides, 
+        antibiotics, and genetic modification. Due to the short travel to nearby markets and cheaper cost of produce, Farmers’ 
+        markets can be a more affordable option for local residents. ",
+              "<br>",
+              "<br>",
+              "Below is more information about Farmers' Markets:",
+              "<br>",
+              a("Farmers' Market Coalition", 
+                href = "https://farmersmarketcoalition.org/education/qanda/"),
+           
+      }
     
     #Icon Legend Outputs
     {
