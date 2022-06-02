@@ -1972,7 +1972,7 @@ their homes, which ultimately changes the demographics of those neighborhoods.
                                                          slidesToScroll = 1)
     })
     
-     observeEvent(input$show, {
+     observeEvent(input$errormessage, {
       showNotification("Information not yet available.")
     })
     }
