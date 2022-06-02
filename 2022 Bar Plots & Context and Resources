@@ -1161,7 +1161,7 @@ Students can take these classes for an opportunity to receive college credit upo
       else if (input$select == "English as a Second Language (ESL) Student Enrollment"){
         paste("This graph shows the number of students enrolled in the English as a Second Language (ESL) or English Language Learners (ELL) Program. 
         ESL students consist of any student regardless of ethnicity, origin, race, age, etc. who is a non-native English speaker. These programs are c
-        reated to help children learn English along with other subjects necessary to complete each grade.", "<br>", "Unfortunately, 
+        reated to help children learn English along with other subjects necessary to complete each grade.", "<br>", "<br>", "Unfortunately, 
                 ESL students can face racial bias, discrimination, and bullying in the classroom. Teachers may bar them from participating in school 
                 activities, extracurriculars, and enrichment programs. It is important that school affiliates recognize that language barriers do not 
                 stunt intellectual development. Additionally, ELL teachers must accommodate their students instead of assimilating them by removing 
@@ -1251,7 +1251,7 @@ their homes, which ultimately changes the demographics of those neighborhoods.
       else if (input$select == "Median Household Income"){
         paste("This graph shows the median household income for each school zone. According to the 2020 US census, 
         the median household income in the United States is $67,521. This is a 2.9% decrease from 2019, which is the 
-        first statistically significant decline we have witnessed since 2011.", "<br>", "The average household income 
+        first statistically significant decline we have witnessed since 2011.", "<br>", "<br>", "The average household income 
         in North Carolina is $54,602, while the median is $65,534, according to the US census as of 2019. Most of these 
         schools fall below the NC and US median, a cause for concern. Poverty directly affects how students learn. 
         Students’ basic human needs must be met in order to excel in the classroom. ", "<br>", "<br>", "Below are links to 
