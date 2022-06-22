@@ -9,6 +9,7 @@
 
 # Load Packages
 library(shiny)
+library(shi18ny)
 library(shinydashboard)
 library(slickR)
 library(leaflet)
@@ -594,10 +595,30 @@ shinyApp(
         dashboardHeader(
             title = "Visualizing DPS"),
         sidebar,
-        body
-    ),
+        body, 
+        br(), 
+        useShi18ny(),
+        langSelectorInput("lang", position = "fixed")
+    ), 
+    
+    
     server = function(input, output, session) { 
         
+      # Configure shi18ny
+      i18n <- list(
+        defaulting = "en", 
+        availableLangs = c("es", "en", "pt")
+      )
+      
+      
+      # Call language module to get currently selected language and save it in a reactive
+      lang <- callModule(langSelector, "lang", i18n = i18n, showSelector = TRUE)
+      
+      # Update UI translation
+      observeEvent(lang(),{
+        uiLangUpdate(input$shi18ny_ui_classes, lang())
+      })
+      
         # SchoolStats - GGPlots
     output$barplots <- renderPlotly({
               if(input$year == "Summer 2021"){
