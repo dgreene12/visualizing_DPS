@@ -465,6 +465,7 @@ function(input, output, session) {
                     geom_text(aes(label = EXP_TEACHER_RATIO), hjust = 1.5, color = "black") +
                     geom_hline(aes(text="Durham County Average = 82.4%", yintercept = 82.4), color ='#01016D') +
                     coord_flip() +
+                  scale_fill_manual(values = c("#D1E3F4", "#76B9F0"))+
                     theme(plot.title = element_text(hjust = 1.5)) +
                     theme_minimal() +
                     labs(title = "Experienced Teacher Ratio", x = "School", y = "Experienced Teachers (%)")
@@ -614,6 +615,18 @@ function(input, output, session) {
                     labs(title = "Elementary School Student-Teacher Ratio", x = "School", y = "Students per Teacher")
                 ggplotly(p, tooltip = c("text"))
             } 
+          else if(input$select == "Student-Teacher Ratio, Middle School") {
+            schoolstats22_summary <- schoolstats22 %>% group_by(SCHOOL_NAME) %>% summarise(STUDENT_TEACHER_MS)
+            p <- ggplot(schoolstats22_summary[!is.na(schoolstats22_summary$STUDENT_TEACHER_MS),], aes(x=reorder(SCHOOL_NAME, -STUDENT_TEACHER_MS), y=STUDENT_TEACHER_MS)) +
+              geom_bar(stat = 'identity', fill = "#76B9F0", color = "white") +
+              geom_text(aes(label = STUDENT_TEACHER_MS), hjust = 1.5, color = "black") +
+              geom_hline(aes(text="Durham County Average = 15.4", yintercept = 15.4), color ='#01016D') +
+              coord_flip() +
+              theme_minimal() +
+              theme(plot.title = element_text(hjust = 1.5)) +
+              labs(title = "Middle School Student-Teacher Ratio", x = "School", y = "Students per Teacher")
+            ggplotly(p, tooltip = c("text"))
+          }
             else if(input$select == "Student-Teacher Ratio, High School") {
                 schoolstats22_summary <- schoolstats22 %>% group_by(SCHOOL_NAME) %>% summarise(STUDENT_TEACHER_HS)
                 p <- ggplot(schoolstats22_summary[!is.na(schoolstats22_summary$STUDENT_TEACHER_HS),], aes(x=reorder(SCHOOL_NAME, -STUDENT_TEACHER_HS), y=STUDENT_TEACHER_HS)) +

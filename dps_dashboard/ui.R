@@ -210,7 +210,7 @@ body <- {dashboardBody(
                                                     "Free and Reduced Lunch","Funding Per Pupil","Graduation Rate","In-School Suspensions (ISS)",
                                                     "Median Age","Median Homesale Price","Median Household Income",
                                                     "Racial Demographics", "School and Zone BIPOC Comparison","Sidewalk Coverage",
-                                                    "Students Per Device","Student-Teacher Ratio, Elementary School","Student-Teacher Ratio, High School", 
+                                                    "Students Per Device","Student-Teacher Ratio, Elementary School", "Student-Teacher Ration, Middle School","Student-Teacher Ratio, High School", 
                                                     "Students With Disabilities", "Titles Per Student", "WiFi Access")
                          ),
                          selectInput("year", em("Click the drop down menu to select which year of data collection you would like to view."), 
