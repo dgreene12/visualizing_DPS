@@ -8,6 +8,7 @@
 #
 
 library(shiny)
+library(shiny.i18n)
 library(shinydashboard)
 library(slickR)
 library(leaflet)
@@ -19,8 +20,26 @@ library(tidyr)
 library(readxl)
 library(gotop)
 
+i18n <- Translator$new(translation_json_path='translation.json')
+i18n$set_translation_language('english')
+
+
+#translationWindow <- {fluidPage()
+
+
 sidebar <- {dashboardSidebar(
-    
+  
+#  shiny.i18n::usei18n(i18n),
+ # tags$div(
+  #  style='float: left;',
+   # selectInput(
+    #  inputId='selected_language',
+     # label=i18n$t('Change language'),
+      #choices = i18n$get_languages(),
+  #    selected = i18n$get_key_translation()
+  #  )
+#  ),
+  
     tags$head(tags$script(HTML('
         var fakeClick = function(tabName) {
           var dropdownList = document.getElementsByTagName("a");
@@ -35,7 +54,7 @@ sidebar <- {dashboardSidebar(
     
     sidebarMenu(
         id = "TabItems",
-        menuItem("Home", tabName = "home", icon = icon("fas fa-home")),
+        menuItem(i18n$t("Home"), tabName = "home", icon = icon("fas fa-home")),
         menuItem("Maps", tabName = "mapstab", icon = icon("fas fa-map-marked-alt")),
         menuItem("School Statistics", tabName = "statstab", icon = icon("fas fa-chart-bar")),
         menuItem("Data Insights", tabName = "insightstab", icon = icon("fas fa-chart-line")),

@@ -1,0 +1,9 @@
+{
+	"languages": ["english", "spanish"],
+	"translation": [
+		{
+			"english":"Home", 
+			"spanish":"Pagina de inicio"
+		}
+	]
+}
