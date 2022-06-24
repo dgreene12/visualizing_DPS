@@ -84,7 +84,7 @@ body <- {dashboardBody(
                          br(),
                          width = 12,
                          valueBox(13, "Geospatial Variables", icon = icon("map"), color = "light-blue", width = 4),
-                         valueBox(24, "School-Specific Variables",  href = "#shiny-tab-statstab", icon = icon("pencil"), color = "light-blue", width = 4),
+                         valueBox(23, "School-Specific Variables",  href = "#shiny-tab-statstab", icon = icon("pencil"), color = "light-blue", width = 4),
                          valueBox(1, "Centralized Web Application", icon = icon("window-restore"), color = "light-blue", width = 4))),
                  fluidRow(
                      class = "text-center",
@@ -210,7 +210,7 @@ body <- {dashboardBody(
                                                     "Free and Reduced Lunch","Funding Per Pupil","Graduation Rate","In-School Suspensions (ISS)",
                                                     "Median Age","Median Homesale Price","Median Household Income",
                                                     "Racial Demographics", "School and Zone BIPOC Comparison","Sidewalk Coverage",
-                                                    "Students Per Device","Student-Teacher Ratio, Elementary School", "Student-Teacher Ration, Middle School","Student-Teacher Ratio, High School", 
+                                                    "Students Per Device","Student-Teacher Ratio, Elementary School", "Student-Teacher Ratio, Middle School","Student-Teacher Ratio, High School", 
                                                     "Students With Disabilities", "Titles Per Student", "WiFi Access")
                          ),
                          selectInput("year", em("Click the drop down menu to select which year of data collection you would like to view."), 
